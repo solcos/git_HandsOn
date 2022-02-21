@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 
 # Import packages
@@ -18,11 +19,16 @@ args = parser.parse_args()
 
 # Main function
 args.seq = args.seq.upper()
+# Select only the sequences with the following nucleotids
 if re.search('^[ACGTU]+$', args.seq):
-    if re.search('T', args.seq):
-        print ('The sequence is DNA')
-    elif re.search('U', args.seq):
-        print ('The sequence is RNA')
+    if re.search('T', args.seq): # search in the sequence if there is a T
+        if not re.search('U',args.seq): # search if it is not a U
+            print ('The sequence is DNA') #Print the result
+        else:
+            print ('The sequence is incorrect')
+    elif re.search('U', args.seq): # Search if there is a U
+        if not re.search('T',args.seq): # Search if there is not a T too
+            print ('The sequence is RNA')
     else:
         print ('The sequence can be DNA or RNA')
 else:
