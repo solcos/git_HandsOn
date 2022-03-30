@@ -2,8 +2,8 @@
 #!/usr/bin/env python
 
 # Import packages
-import sys, re
-from argparse import ArgumentParser
+import sys, re #it is importing the packages 
+from argparse import ArgumentParser #here we have more packages
 
 # Set description an arguments
 parser = ArgumentParser(description = 'Classify a sequence as DNA or RNA')
