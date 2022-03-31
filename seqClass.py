@@ -6,7 +6,7 @@ import sys, re #it is importing the packages
 from argparse import ArgumentParser #here we have more packages
 
 # Set description an arguments
-parser = ArgumentParser(description = 'Classify a sequence as DNA or RNA')
+parser = ArgumentParser(description = 'Classify a sequence as DNA or RNA') # classify a sequence as DNA or RNA
 parser.add_argument("-s", "--seq", type = str, required = True, help = "Input sequence")
 parser.add_argument("-m", "--motif", type = str, required = False, help = "Motif")
 
